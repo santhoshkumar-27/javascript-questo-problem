@@ -38,11 +38,18 @@ function deepCopyWithCircularReferences(obj, memo = new WeakMap()) {
 
 // Example usage:
 const originalObj = {
-    a: 1,
-    b: 'hello',
+    name: 'asdfasdf',
+    address: {
+        no: 1,
+        streetname: 'bhavani nagar',
+        area: 'veerampattinm',
+        city: 'Puducherry',
+        state: 'Puducherry',
+        zipcode: 605007
+    }
 };
 
-originalObj.circularReference = originalObj; // Circular reference
+// originalObj.circularReference = originalObj; // Circular reference
 
 const deepCopy = deepCopyWithCircularReferences(originalObj);
 
