@@ -1,5 +1,10 @@
+// it return the same references
 function returnSameThing(value) {
     return value;
+}
+// it return the new references
+function returnJsonParse(value) {
+    return JSON.parse(JSON.stringify(value));
 }
 
 const originalObj = {
@@ -17,8 +22,7 @@ const originalObj = {
 
 console.log('before', originalObj);
 
-// it return the same references
-const modified = returnSameThing(originalObj)
+const modified = returnJsonParse(originalObj)
 
 modified.name = 'new'
 
